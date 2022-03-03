@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_delivery"
+    app:startDestination="@id/stationsFragment">
+
+    <fragment
+        android:id="@+id/favoriteStationsFragment"
+        android:name="com.ozcanalasalvar.delivery_app.ui.favortie.FavoriteStationsFragment"
+        android:label="FavoriteStationsFragment"
+        tools:layout="@layout/fragment_favorite_stations" />
+    <fragment
+        android:id="@+id/stationsFragment"
+        android:name="com.ozcanalasalvar.delivery_app.ui.station.StationsFragment"
+        android:label="StationsFragment"
+        tools:layout="@layout/fragment_stations" />
+</navigation>

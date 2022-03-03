@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/spaceVehicleFragment">
+
+    <fragment
+        android:id="@+id/spaceVehicleFragment"
+        android:name="com.ozcanalasalvar.delivery_app.ui.vehicle.SpaceVehicleFragment"
+        android:label="fragment_space_vehicle"
+        tools:layout="@layout/fragment_space_vehicle" >
+        <action
+            android:id="@+id/action_spaceVehicleFragment_to_spaceDeliveryFragment"
+            app:destination="@id/spaceDeliveryFragment"
+            app:popUpTo="@+id/main_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/spaceDeliveryFragment"
+        android:name="com.ozcanalasalvar.delivery_app.ui.delivery.DeliveryFragment"
+        android:label="SpaceDeliveryFragment"
+        tools:layout="@layout/fragment_delivery" />
+
+
+</navigation>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.vehicle.SpaceVehicleFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_point"
+            android:textSize="@dimen/large_text"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_total_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/black" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cell_bg_grey"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/edt_vehicle_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:hint="@string/vehicle_name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/durability"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar_durability"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:max="15"
+            android:progress="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/velocity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar_velocity"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:max="15"
+            android:progress="0" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capacity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar_capacity"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:max="15"
+            android:progress="0" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/pnl_go_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/cell_bg_grey"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_on"
+            android:textSize="@dimen/large_text"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+</LinearLayout>
