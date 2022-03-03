@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id("androidx.navigation.safeargs")
+    id 'dagger.hilt.android.plugin'
+}
+
+def deps = rootProject.ext.libs
+def config = rootProject.ext.android
+
+android {
+    compileSdk config.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.ozcanalasalvar.delivery_app"
+        minSdk config.minSdkVersion
+        targetSdk config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        buildConfigField "String", "BASE_URL", '"https://run.mocky.io/v3/"'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // Added Dependencies
+    implementation deps.recyclerView
+    implementation deps.extensions
+    implementation deps.lifecycleViewmodelKtx
+    implementation deps.lifecycleRuntimeKtx
+    implementation deps.glide
+
+    //retrofit
+    implementation deps.retrofit
+    implementation deps.converterMoshi
+
+    //Coroutine
+    implementation deps.kotlinxCoroutinesAndroid
+    implementation deps.kotlinxCoroutinesCore
+
+    //Hilt
+    implementation deps.hiltAndroid
+    implementation deps.hiltLifecycleViewmodel
+    kapt deps.hiltAndroidCompiler
+    kapt deps.hiltCompiler
+
+    //navigation
+    implementation deps.navigationFragmentKtx
+    implementation deps.navigationUItKtx
+
+    // room db
+    implementation deps.roomRunTime
+    implementation deps.roomKtx
+    kapt deps.roomCompiler
+
+    //LiveData
+    implementation deps.lifecycleLiveData
+
+    //DataStore
+    implementation deps.dataStore
+}
+
+kapt {
+    correctErrorTypes true
+}

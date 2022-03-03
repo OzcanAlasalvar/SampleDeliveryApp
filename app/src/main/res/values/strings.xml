@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Delivery App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="err_http_unkown">An unexpected error occurred.</string>
+    <string name="err_http_time_out">Connection timed out</string>
+    <string name="err_http_internet">Check your internet connection</string>
+    <string name="station">Station</string>
+    <string name="favorites">Favorites</string>
+    <string name="add_favorite_complete">Station\'s favorite statues has changed</string>
+    <string name="no_eus">You dont have enough EUS.</string>
+    <string name="no_ugs">You dont have enough UGS.</string>
+    <string name="general_error">Opps ! Sth went wrong.</string>
+    <string name="total_point">Total Point :</string>
+    <string name="vehicle_name">Vehicle Name ...</string>
+    <string name="go_on">Continue</string>
+    <string name="durability">Durability</string>
+    <string name="velocity">Velocity</string>
+    <string name="capacity">Capacity</string>
+    <string name="ugs">UGS : </string>
+    <string name="eus">EUS : </string>
+    <string name="ds">DS : </string>
+    <string name="currentstation">Current Station</string>
+    <string name="damage_capacity">Damage Capacity :</string>
+    <string name="return_home">You have to return home.</string>
+    <string name="delivery_over">Delivery Finished!</string>
+    <string name="ok">OK!</string>
+</resources>

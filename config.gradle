@@ -1,0 +1,90 @@
+ext {
+
+    android = [
+            compileSdkVersion: 31,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 21,
+            targetSdkVersion : 31,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    version = [
+            //retrofit
+            retrofitSdkVersion           : "2.8.1",
+            moshiVersion                 : "2.6.2",
+            okhttpVersion                : "3.11.0",
+
+            //Coroutine
+            coroutines                   : "1.5.0",
+
+            recyclerViewVersion          : "1.2.1",
+            lifeCycleExtVersion          : "1.1.1",
+            lifecycleVersion             : "2.4.0",
+
+            //Glide
+            glideVersion                 : "4.11.0",
+
+            //Hilt
+            hiltVersion                  : "2.40.5",
+            hiltLifecycleViewModelVersion: "1.0.0-alpha03",
+            hiltCompilerVersion          : "1.0.0",
+
+            //navigation
+            navigationVersion            : "2.4.0-alpha02",
+
+            //room
+            roomVersion                  : "2.4.0-alpha04",
+
+            //lifecycle
+            lifecycle_version            : "2.2.0",
+
+            //datastore
+            dataStoreVersion             : "1.0.0-alpha02"
+
+
+    ]
+
+    libs = [
+
+
+            // Added Dependencies
+            "recyclerView"            : "androidx.recyclerview:recyclerview:${version["recyclerViewVersion"]}",
+            "extensions"              : "android.arch.lifecycle:extensions:${version["lifeCycleExtVersion"]}",
+            "lifecycleViewmodelKtx"   : "androidx.lifecycle:lifecycle-viewmodel-ktx:${version["lifecycleVersion"]}",
+            "lifecycleRuntimeKtx"     : "androidx.lifecycle:lifecycle-runtime-ktx:${version["lifecycleVersion"]}",
+            "glide"                   : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+
+            //retrofit
+            "retrofit"                : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "converterMoshi"          : "com.squareup.retrofit2:converter-moshi:${version["moshiVersion"]}",
+
+            //Coroutine
+            "kotlinxCoroutinesAndroid": "org.jetbrains.kotlinx:kotlinx-coroutines-android:${version["coroutines"]}",
+            "kotlinxCoroutinesCore"   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${version["coroutines"]}",
+
+            //Hilt
+            "hiltAndroid"             : "com.google.dagger:hilt-android:${version["hiltVersion"]}",
+            "hiltAndroidCompiler"     : "com.google.dagger:hilt-android-compiler:${version["hiltVersion"]}",
+            "hiltLifecycleViewmodel"  : "androidx.hilt:hilt-lifecycle-viewmodel:${version["hiltLifecycleViewModelVersion"]}",
+            "hiltCompiler"            : "androidx.hilt:hilt-compiler:${version["hiltCompilerVersion"]}",
+
+            //navigation
+            "navigationFragmentKtx"   : "androidx.navigation:navigation-fragment-ktx:${version["navigationVersion"]}",
+            "navigationUItKtx"        : "androidx.navigation:navigation-ui-ktx:${version["navigationVersion"]}",
+
+
+            // room db
+            "roomRunTime"             : "androidx.room:room-runtime:${version["roomVersion"]}",
+            "roomKtx"                 : "androidx.room:room-ktx:${version["roomVersion"]}",
+            "roomCompiler"            : "androidx.room:room-compiler:${version["roomVersion"]}",
+
+            //LiveData
+            "lifecycleLiveData"       : "androidx.lifecycle:lifecycle-livedata-ktx:${version["lifecycle_version"]}",
+
+            //DataStore
+            "dataStore"               : "androidx.datastore:datastore-preferences:${version["dataStoreVersion"]}"
+
+    ]
+
+}
